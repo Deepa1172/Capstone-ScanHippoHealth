@@ -29,14 +29,42 @@ The project employs a 3D-Unet architecture for accurate segmentation. The archit
    ```bash
    git clone https://github.com/Sanjay71013/ScanHippoHealth-Medical-MRI-Segmentation.git
    ```
+   
+2. **Create Virtual Environment**
 
-2. **Install Dependencies**
+   ```bash
+   python -m venv .venv
+   ```
+      
+3. **Activate Virtual Environment**
+
+   ```bash
+   .venv\Scripts\activate.bat
+   ```
+
+4. **Install Dependencies**
 
    ```bash
    pip install -r requirements.txt
    ```
+5. **Setup your own Database and create a table named "accounts" in [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)**
 
-3. **Run the Application**
+    ```bash
+    CREATE DATABASE db;
+    USE db;
+    
+    CREATE TABLE IF NOT EXISTS accounts( 
+    id int(11) NOT NULL AUTO_INCREMENT, 
+    username varchar(50) NOT NULL, 
+    password varchar(255) NOT NULL, 
+    email varchar(100) NOT NULL unique, 
+    PRIMARY KEY (id) 
+    ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+   ```
+   
+7. **Create a .env file to store your database "MYSQL_HOST", "MYSQL_USER", "MYSQL_PASSWORD", "MYSQL_DB" and "APP_SECRET_KEY"**
+
+8. **Run the Application**
 
    ```bash
    python app.py
@@ -84,7 +112,3 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 ## License 🪪
 
 This project is licensed under [MIT License](LICENSE).
-
----
-
-Feel free to tailor this template to fit your project's specific details and styling preferences.
