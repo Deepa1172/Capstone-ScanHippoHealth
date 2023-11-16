@@ -9,7 +9,8 @@ ScanHippoHealth is a sophisticated MRI segmentation project specifically designe
 
 ## Overview
 
-The project employs a 3D-Unet architecture for accurate segmentation. The architecture diagram can be found at `screenshots/Segmentation Architecture.png`.
+The project employs a 3D-Unet architecture for accurate segmentation. The architecture diagram can be found at 
+![Architecture Diagram](screenshots/Segmentation Architecture.png)
 
 ## Features 🚀
 
