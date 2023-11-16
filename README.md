@@ -1,6 +1,9 @@
 # ScanHippoHealth 🧠💊
 
-![ScanHippoHealth Logo](screenshots/logo.png)
+<div align="center">
+  <img src="screenshots/logo.png" alt="ScanHippoHealth Logo">
+</div>
+
 
 ScanHippoHealth is a sophisticated MRI segmentation project specifically designed for the segmentation of the Hippocampus. The project utilizes the dataset provided by the [Medical Segmentation Decathlon](http://medicaldecathlon.com/) for Generalizable 3D Semantic Segmentation.
 
