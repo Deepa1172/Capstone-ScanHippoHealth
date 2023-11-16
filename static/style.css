@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --logout-color: rgb(160, 191, 224);
+    --padding-inline-section: 20px
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+.small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--pading-inline-section);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.hover-links {
+    color: var(--primary-text-color);
+    transition: 0.2s ease-out;
+}
+
+.hover-links:hover {
+    color: var(--accent-color);
+}
+
+.primary-button {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+}
+
+.primary-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.secondary-button {
+    border: 0.5px solid var(--secondary-text-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--primary-text-color) !important;
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+}
+
+.secondary-button:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color) !important;
+}
+
+.logout-button {
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--accent-color);
+    background-color: white;
+    border: 2px solid var(--accent-color);
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: color 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.logout-button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    border-color: var(--logout-color);
+}
+
+.banner-text {
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+.top-banner {
+    background-image: url('./assets/large-triangles-blue-background.jpg');
+    background-color: #4fb3d4;
+    background-size: 300px;
+}
+
+.main-nav {
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.company-logo img {
+    width: 200px;
+}
+
+.nav-links {
+    flex-basis: 730px;
+}
+
+.nav-links ul {
+    justify-content: end;
+    gap: 40px;
+}
+
+.header {
+    padding: 50px var(--padding-inline-section) 0;
+}
+
+.header-section {
+    justify-content: center;
+    gap: 50px;
+}
+
+.header-left {
+    max-width: 40vw;
+}
+
+.header-left h1 {
+    margin-top: 20px;
+}
+
+.get-started-btn {
+    margin-top: 20px;
+}
+
+.header-right img {
+    width: 600px;
+}
+
+.features-section {
+    padding: 80px var(--padding-inline-section) 0;
+}
+
+.feature-header {
+    text-align: center;
+}
+
+.features-heading-text {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.features.area {
+    justify-content: space-between;
+    gap: 80px;
+    margin-top: 100px;
+    column-gap: 30px;
+    padding: 50px;
+}
+
+.features-card {
+    flex-direction: column;
+    gap: 30px;
+    max-width: 40%;
+    text-align: center;
+}
+
+.big-feature-section {
+    padding: 30px var(--padding-inline-section) 0;
+    margin-top: 100px;
+}
+
+.big-feature-container {
+    gap: 30px;
+}
+
+.feature-img img {
+    width: 600px;
+}
+
+.feature-desc {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cta-section-container {
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+
+.cta-section {
+    padding: 120px var(--padding-inline-section) 80px;
+    background-color: #183b54;
+    margin-top: 50px;
+}
+
+.cta-section-container p {
+    color: white;
+    margin-top: 50px;
+}
+
+.upload-section input[type="file"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #577592;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.upload-button {
+    align-items: center;
+}
+
+.subfooter {
+    background-color: #b9cde4;
+    text-align: center;
+    padding: var(--padding-inline-section);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

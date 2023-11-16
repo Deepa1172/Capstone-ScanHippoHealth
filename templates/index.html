@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>ScanHippoHealth | Home</title>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+        <div class="top-banner">
+            <div class="container">
+                <div class="small-bold-text banner-text">Hippocampus Segmentation powered by Machine Learning</div>
+            </div>
+            
+        </div>
+        <nav>
+            <div class="container main-nav flex">
+                <a href="#" class="company-logo">
+                    <img src="../static/assets/logo.png" alt="company logo">
+
+                </a>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li><a href="#home"class="hover-links">Home</a></li>
+                        <li><a href="#about"class="hover-links">About</a></li>
+                        <li><a href="#upload"class="hover-links">Upload</a></li>
+                        <li><a href="{{ url_for('logout') }}" class="logout-button">Logout</a></li>
+                        <li><a class="primary-button" style="pointer-events: none">Welcome {{username}}</a></li>
+                        
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <header>
+            <div class="container header-section flex">
+                <div class="header-left" id="home">
+                    <h1>ScanHippoHealth</h1>
+                    <p>ScanHippoScan is a revolutionary platform for doctors, powered by machine learning. It simplifies Hippocampus MRI scan segmentation, reducing doctors' workload. Enhance accuracy, streamline workflows, and improve patient care with our advanced technology.</p>
+                    <a href="#segment" class="primary-button get-started-btn">Get Started</a>
+                </div>
+                <div class="header-right">
+                    <img src="../static/assets/photo1.jpeg" alt="hero image">
+
+
+                </div>
+            </div>
+        </header>
+        <section class="feature-section">
+            <div class="container">
+                <div class="features-header" id="about">
+                    <h2 class="features-heading-text">Why hippocampus Segmentation is Difficult?</h2>
+                </div>
+                <div class="features-area flex">
+                    <div class="features-card flex">
+                        <img src="../static/assets/one.png" alt="">
+                        <h3>Variability</h3>
+                        <p>The hippocampus has a complex and irregular shape, and its size and shape can vary significantly between individuals.
+                        </p>
+                    </div>
+                    <div class="features-card flex">
+                        <img src="../static/assets/two.png" alt="">
+                        <h3>Structures</h3>
+                        <p>It is closely situated to other brain structures, making it difficult to isolate accurately.
+
+                        </p>
+                    </div>
+                    <div class="features-card flex">
+                        <img src="../static/assets/three.png" alt="">
+                        <h3>Pathological Changes</h3>
+                        <p>In cases of neurological disorders, the hippocampus can undergo structural changes, further complicating segmentation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="big-feature-section">
+            <div class="container flex big-feature-container">
+                <div class="feature-img">
+                    <img src="../static/assets/2.png" alt="">
+                </div>  
+                <div class="feature-desc flex">
+                    <h2>Why hippocampal health Matters?</h2>
+                    <p>The hippocampus plays a crucial role in memory formation, spatial navigation, and emotional regulation. Therefore, accurately assessing and monitoring its health is essential for several reasons.
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="feature-section">
+            <div class="container">
+                <div class="features-area flex">
+                    <div class="features-card flex">
+                        <img src="../static/assets/one.png" alt="">
+                        <h3>Early Detection</h3>
+                        <p>Changes in the hippocampus can be early indicators of neurological conditions like Alzheimer's disease and epilepsy, allowing for early intervention and treatment.
+
+                        </p>
+                    </div>
+                    <div class="features-card flex">
+                        <img src="../static/assets/two.png" alt="">
+                        <h3>Treatment Planning</h3>
+                        <p>Accurate segmentation aids in treatment planning and monitoring, ensuring the best care for patients.
+
+                        </p>
+                    </div>
+                    <div class="features-card flex">
+                        <img src="../static/assets/three.png" alt="">
+                        <h3>Enhanced Research</h3>
+                        <p>A better understanding of the hippocampus contributes to advancements in neurological research,potentially leading to imprpoved treatments and therapies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+        <section class="cta-section" id="segment">
+            <div class="container flex cta-section-container upload-section " id="upload">
+                <h2>Upload Your MRI Scan File</h2>
+                <p>Select and upload your MRI scan file in .nii format for analysis.</p>
+                <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="mri_scan" accept=".nii.gz" required>
+                    <input type="submit" value="Upload and Process" class="primary-button upload-button primary-button-hover">
+                </form>
+            </div>           
+      </form>
+
+      {% if image_path %}
+        <h2 class="small-bold-text banner-text">Input Image</h2>
+        <img src="{{ image_path }}" alt="Input Image" class="center">
+    {% endif %}
+
+    {% if mask_path %}
+        <h2 class="small-bold-text banner-text">Predicted Mask</h2>
+        <img src="{{ mask_path }}" alt="Predicted Image" class="center">
+    {% endif %}
+
+        </section>
+
+        <footer>
+        <div class="subfooter">
+            <h3>© Copyright 2023</h3>
+            <br>
+            <h3>VIT-AP Capstone Project</h3>
+        </div>
+    </footer>
+        <script src="https://kit.fontawesome.com/75fad42fba.js" crossorigin="anonymous"></script>
+    </body>
+</html>

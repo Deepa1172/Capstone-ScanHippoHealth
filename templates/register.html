@@ -1,0 +1,148 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ScanHippoHealth | Register</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #2b2e33;
+      }
+
+      .container {
+        background-color: #d4d2d2;
+        margin-top: 50px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #ffffff;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        color: #ffffff;
+      }
+
+      input.form-control {
+        border-radius: 5px;
+      }
+
+      button.btn-primary {
+        background-color: #ff9900;
+        border: none;
+      }
+
+      button.btn-primary:hover {
+        background-color: #ffcc00;
+      }
+
+      p.bottom {
+        margin-top: 20px;
+        color: #ffffff;
+      }
+
+      a.bottom {
+        color: #0066c0;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a.bottom:hover {
+        color: #0056b3;
+      }
+      .top-banner {
+        background-image: url("./assets/large-triangles-blue-background.jpg");
+        background-color: #4fb3d4;
+        background-size: 300px;
+      }
+      .topbar {
+        max-width: 1180px;
+        margin-inline: auto;
+        padding-inline: var(--pading-inline-section);
+      }
+      .small-bold-text {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      .banner-text {
+        color: white;
+        padding: 15px 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-banner">
+      <div class="topbar">
+        <div class="small-bold-text banner-text">
+          Hippocampus Segmentation powered by Machine Learning
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>User Registration</h2>
+      <form action="{{ url_for('register') }}" method="post">
+        {% if message is defined and message %}
+        <div class="alert alert-warning">{{ message }}</div>
+        {% endif %}
+        <div class="form-group">
+          <label for="name">User Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+            placeholder="Enter name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <p class="bottom">
+          Already have an account?
+          <a
+            class="bottom"
+            href="{{url_for('login')}}"
+            style="
+              text-decoration: none;
+              font-weight: bold;
+              color: #0066c0;
+              transition: color 0.2s;
+            "
+            onmouseover="this.style.color='#004080'"
+            onmouseout="this.style.color='#0066c0'"
+          >
+            Login here</a
+          >
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
