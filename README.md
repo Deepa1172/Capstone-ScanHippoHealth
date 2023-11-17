@@ -107,7 +107,7 @@ The project employs a 3D-Unet architecture for accurate segmentation. The archit
 
 ## Contributing 🤝
 
-Contributions are welcome! Feel free to open issues or submit pull requests.
+Current contributors are [Sanjay Mythili](https://github.com/Sanjay71013), [Deepashree Vaideeswar](https://github.com/Deepa1172). Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ## License 🪪
 
